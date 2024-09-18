@@ -1,10 +1,11 @@
 <script setup>
-import Accueil from './components/Accueil.vue'
+
 </script>
 
 <template>
+  <router-view></router-view>
   
-  <Accueil  />
+  
 </template>
 
 <style scoped>

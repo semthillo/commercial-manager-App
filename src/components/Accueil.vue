@@ -32,6 +32,8 @@ const count = ref(0)
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+
+<router-view></router-view>
  
 </template>
 

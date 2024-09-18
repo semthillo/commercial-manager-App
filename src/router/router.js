@@ -1,9 +1,25 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Accueil from '../components/Accueil.vue';
+import AddOrder from '../components/orders/AddOrder.vue';
+import AddProduct from '../components/products/AddProduct.vue';
+
+import ListCustomer from '../components/customers/ListCustomer.vue';
+import ListOrder from '../components/orders/ListOrder.vue';
+import Addcustomer from '../components/customers/Addcustomer.vue';
+import ListProduct from '../components/products/ListProduct.vue';
+
+
 
 
 const routes = [
-  { path: '/', component: Accueil },
+  { path: '/', name: "accueil", component: Accueil },
+  { path: '/add-order', name: "AddOrder", component: AddOrder },
+  { path: '/add-product', name: "AddProduct", component: AddProduct },
+  { path: '/list-customer', name: "ListCustomer", component: ListCustomer },
+  { path: '/list-order', name: "ListOrder", component: ListOrder },
+  { path: '/list-product', name: "ListProduct", component: ListProduct },
+
+
   
 ];
 
