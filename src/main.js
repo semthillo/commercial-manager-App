@@ -8,7 +8,8 @@ import { createApp } from 'vue'
 
 import App from './App.vue'
 import { createPinia } from 'pinia'
-import router from 'vue-router'
+import router from './router/router';
+
 
 
 
