@@ -34,6 +34,53 @@ export const useGestionStore = defineStore("gestion", {
               phone: "+1-555-567-8901"
             }
           ],
+          products: [
+            {
+              name: "Wireless Mouse",
+              description: "Ergonomic wireless mouse with 1600 DPI sensitivity.",
+              price: 25.99,
+              stock: 150,
+              category: "Electronics",
+              barcode: "123456789012",
+              status: "Available"
+            },
+            {
+              name: "Bluetooth Headphones",
+              description: "Noise-cancelling over-ear headphones with 20 hours battery life.",
+              price: 79.99,
+              stock: 85,
+              category: "Accessories",
+              barcode: "234567890123",
+              status: "Available"
+            },
+            {
+              name: "Office Chair",
+              description: "Adjustable height office chair with lumbar support.",
+              price: 149.99,
+              stock: 30,
+              category: "Furniture",
+              barcode: "345678901234",
+              status: "Out of Stock"
+            },
+            {
+              name: "Standing Desk",
+              description: "Electric adjustable standing desk with memory presets.",
+              price: 299.99,
+              stock: 20,
+              category: "Furniture",
+              barcode: "456789012345",
+              status: "Available"
+            },
+            {
+              name: "LED Desk Lamp",
+              description: "LED lamp with touch control and USB charging port.",
+              price: 39.99,
+              stock: 200,
+              category: "Lighting",
+              barcode: "567890123456",
+              status: "Available"
+            }
+          ],
         
           
           
@@ -42,7 +89,7 @@ export const useGestionStore = defineStore("gestion", {
 
 
     actions: {
-        addCustomer(){
+        addCustomer(name, address, email, phone){
             this.customers.push({name, address, email, phone})
         },
 
@@ -61,6 +108,30 @@ export const useGestionStore = defineStore("gestion", {
             this.editedCustomer = customer;
           },
 
-    }
+    },
+
+
+
+    addProduct(name, description, price, stock, category, barcode, status){
+        this.products.push({name, description, price, stock, category, barcode, status})
+    },
+
+    removeProduct(index){
+        this.products.splice(index, 1)
+    },
+    setCurrentProductIndex(index) {
+        this.currentIndex = index;
+      },
+      editProduct(name, description, price, stock, category, barcode, status) {
+        if (index >= 0 && index < this.products.length) {
+          this.products[index] = { name, description, price, stock, category, barcode, status };
+        }
+      },
+      setEditedProduct(product) {
+        this.editedProduct = product;
+      },
+      
+
+
 
 })
