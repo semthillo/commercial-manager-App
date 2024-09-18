@@ -81,6 +81,44 @@ export const useGestionStore = defineStore("gestion", {
               status: "Available"
             }
           ],
+
+          orders: [
+            {
+              date: "2024-09-15",
+              client: "John Doe",
+              deliveryAddress: "123 Main St, Springfield, IL",
+              trackingNumber: "TRK123456789",
+              status: "Shipped"
+            },
+            {
+              date: "2024-09-16",
+              client: "Jane Smith",
+              deliveryAddress: "456 Oak St, Metropolis, NY",
+              trackingNumber: "TRK987654321",
+              status: "Processing"
+            },
+            {
+              date: "2024-09-17",
+              client: "Michael Johnson",
+              deliveryAddress: "789 Pine St, Gotham, CA",
+              trackingNumber: "TRK456123789",
+              status: "Delivered"
+            },
+            {
+              date: "2024-09-18",
+              client: "Emily Davis",
+              deliveryAddress: "101 Maple Ave, Star City, TX",
+              trackingNumber: "TRK321654987",
+              status: "Shipped"
+            },
+            {
+              date: "2024-09-18",
+              client: "William Brown",
+              deliveryAddress: "202 Cedar Rd, Central City, FL",
+              trackingNumber: "TRK654987321",
+              status: "Cancelled"
+            }
+          ]
         
           
           
@@ -130,8 +168,26 @@ export const useGestionStore = defineStore("gestion", {
       setEditedProduct(product) {
         this.editedProduct = product;
       },
-      
 
 
+
+      addOrder(date, client, deliveryAddress, trackingNumber, status ){
+        this.products.push({date, client, deliveryAddress, trackingNumber, status})
+    },
+
+    removeOrder(index){
+        this.orders.splice(index, 1)
+    },
+    setCurrentOrderIndex(index) {
+        this.currentIndex = index;
+      },
+      editOrder(date, client, deliveryAddress, trackingNumber, status) {
+        if (index >= 0 && index < this.orders.length) {
+          this.orders[index] = { date, client, deliveryAddress, trackingNumber, status };
+        }
+      },
+      setEditedProduct(order) {
+        this.editedOrder = order;
+      },
 
 })
