@@ -7,6 +7,8 @@ import ListCustomer from '../components/customers/ListCustomer.vue';
 import ListOrder from '../components/orders/ListOrder.vue';
 import Addcustomer from '../components/customers/Addcustomer.vue';
 import ListProduct from '../components/products/ListProduct.vue';
+import EditCustomer from '../components/customers/EditCustomer.vue';
+
 
 
 
@@ -18,6 +20,9 @@ const routes = [
   { path: '/list-customer', name: "ListCustomer", component: ListCustomer },
   { path: '/list-order', name: "ListOrder", component: ListOrder },
   { path: '/list-product', name: "ListProduct", component: ListProduct },
+  { path: '/add-customer', name: "Addcustomer", component: Addcustomer },
+  { path: '/edit-customer', name: "EditCustomer", component: EditCustomer },
+  
 
 
   
