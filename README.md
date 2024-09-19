@@ -23,13 +23,13 @@ Commercial Manager App is a Vue.js application designed to manage customers, pro
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/commercial-manager-app.git
+   git clone https://github.com/semthillo/commercial-manager-App.git
    ```
 
 2. Navigate into the project directory:
 
     ```bash
-    cd commercial-manager-app
+    cd commercial-manager-App
     ```
 
 3. Install dependencies:
