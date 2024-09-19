@@ -119,6 +119,32 @@ export const useGestionStore = defineStore("gestion", {
               status: "Cancelled"
             }
           ],
+
+           orderDetails: [
+            {
+              product: "Laptop",
+              quantity: 2,
+              price: 1200
+            },
+            {
+              product: "Mouse",
+              quantity: 5,
+              price: 25
+            },
+            {
+              product: "Keyboard",
+              quantity: 3,
+              price: 45
+            },
+            {
+              product: "Monitor",
+              quantity: 1,
+              price: 300
+            }
+          ],
+          
+          
+          
           currentIndex: null,
         
           
@@ -190,5 +216,7 @@ export const useGestionStore = defineStore("gestion", {
       setEditedProduct(order) {
         this.editedOrder = order;
       },
-
+      addDetail(product,quantity, price ){
+        this.orderDetails.push({product,quantity, price})
+    },
 })

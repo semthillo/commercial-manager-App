@@ -53,7 +53,7 @@
       
       </div>
       <div class=" d-flex justify-content-start mb-2">
-         <router-link class="btn btn-info mt-3" to="/add-product" @click="addOrder"><i class="fa fa-plus" aria-hidden="true"></i> Submit</router-link>
+         <router-link class="btn btn-info mt-3" to="/add-product" @click="addNewOrder"><i class="fa fa-plus" aria-hidden="true"></i> Save</router-link>
      </div>
       </form>
      </div>
@@ -95,7 +95,7 @@
     </tr>
     <tr >
         <td colspan="4">
-            <router-link class="btn btn-success mt-3" to="/list-order"><i class="fa fa-home" aria-hidden="true"></i> Add new Details</router-link>
+            <router-link class="btn btn-success mt-3" to="/list-order"><i class="fa fa-home" aria-hidden="true"></i> Save new Details</router-link>
         </td> 
      </tr>
    
@@ -106,35 +106,7 @@
  </template>
  <script setup>
 
-import { useRouter } from 'vue-router';
 
-
-import { useGestionStore } from '../../store/gestion';
-import { ref } from 'vue';
-
-const store = useGestionStore()
-const router = useRouter()
-
-
-
- const newOrder = ref ({date:"", client:"", deliveryAddress:"", trackingNumber:"", status:""})
- const newDetail = ref({product:"", quantity:"", price:""})
- 
-
- function addOrder(){
-    store.addDetail(
-    newOrder.value.date,
-    newOrder.value.client,
-    newOrder.value.deliveryAddress,
-    newOrder.value.trackingNumber,
-    newOrder.value.status)
- }
-
- function addDetail(){
-    newDetail.value.product,
-    newDetail.value.quantity,
-    newDetail.value.price
- }
  
  </script>
  <style scoped>
