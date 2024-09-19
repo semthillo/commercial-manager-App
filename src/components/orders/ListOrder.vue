@@ -9,8 +9,8 @@
       </router-link>
     </div>
   
-    <div class="container">
-      <table class="table table-bordered">
+    <div class="container-fluid">
+      <table class="table  table-bordered">
         <thead>
           <tr>
             <th scope="col">Date</th>
@@ -33,10 +33,10 @@
                 <i class="fa fa-eye" aria-hidden="true"></i>
               </button>
               <button type="button" class="btn btn-warning" @click="edit(order)">
-                <i class="fa fa-pencil" aria-hidden="true"></i>
+                <i class="fa fa-pencil" aria-hidden="true"> </i>
               </button>
               <button type="button" class="btn btn-danger" @click="destroy(order)">
-                <i class="fa fa-trash" aria-hidden="true"></i>
+                <i class="fa fa-trash" aria-hidden="true"> </i>
               </button>
             </td>
           </tr>

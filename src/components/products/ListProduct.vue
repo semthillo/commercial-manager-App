@@ -7,7 +7,7 @@
          <router-link class="btn btn-info" to="/add-product"><i class="fa fa-cube" aria-hidden="true"></i> Add New Product</router-link>
      </div>
      
-    <div class="container">
+    <div class="container-fluid">
       <table class="table table-bordered">
    <thead>
      <tr>
@@ -32,7 +32,7 @@
        <td>{{product.category}}</td>
        <td>{{product.barcode}}</td>
        <td>{{product.status}}</td>
-       <td><button type="button" class="btn btn-primary" @click="openModal(product)"><i class="fa fa-eye" aria-hidden="true"></i></button> <button type="button" class="btn btn-warning" @click="edit"><i class="fa fa-pencil" aria-hidden="true"></i></button>  <button type="button" class="btn btn-danger" @click="destroy"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+       <td><button type="button" class="btn btn-primary" @click="openModal(product)"><i class="fa fa-eye " aria-hidden="true"></i></button> <button type="button" class="btn btn-warning" @click="edit"><i class="fa fa-pencil" aria-hidden="true"></i></button>  <button type="button" class="btn btn-danger" @click="destroy"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
        
      </tr>
    </tbody>
