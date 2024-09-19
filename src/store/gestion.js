@@ -118,7 +118,8 @@ export const useGestionStore = defineStore("gestion", {
               trackingNumber: "TRK654987321",
               status: "Cancelled"
             }
-          ]
+          ],
+          currentIndex: null,
         
           
           

@@ -18,15 +18,14 @@
 
     <div class="modal-overlay">
       <div class="modal-content">
-        <div class="modal-header border-bottom border-1 pb-4">
-          <h5 class="modal-title">Create new product</h5>
+        <div class="modal-header">
+          <h5 class="modal-title">Edit Product</h5>
           
         </div>
         <div class="modal-body">
     <form @submit.prevent="onSubmit">
-      <div class="champs">
-        <div class="mb-3">
-        <label for="name" class="form-label">Poduct Name</label>
+      <div class="mb-3">
+        <label for="name" class="form-label">Product Name</label>
         <input
           type="text"
           class="form-control"
@@ -35,63 +34,34 @@
           required
         />
       </div>
-      
       <div class="mb-3">
-        <label for="price" class="form-label">Price</label>
+        <label for="address" class="form-label">Address</label>
         <input type="text"
           class="form-control"
-          id="price"
-          v-model="newProduct.price"
+          id="address"
+          v-model="newProduct.address"
           required
         >
       </div>
       <div class="mb-3">
-        <label for="stock" class="form-label">Stock</label>
+        <label for="email" class="form-label">Email</label>
         <input type="text"
           class="form-control"
-          id="stock"
-          v-model="newProduct.stock"
+          id="email"
+          v-model="newProduct.email"
           required
         >
       </div>
       <div class="mb-3">
-        <label for="category" class="form-label">category</label>
+        <label for="phone" class="form-label">Phone</label>
         <input type="text"
           class="form-control"
-          id="category"
-          v-model="newProduct.category"
-          required
-        >
-      </div>
-      <div class="mb-3">
-        <label for="barcode" class="form-label">Barcode</label>
-        <input type="text"
-          class="form-control"
-          id="barcode"
-          v-model="newProduct.barcode"
-          required
-        >
-      </div>
-      <div class="mb-3">
-        <label for="status" class="form-label">Status</label>
-        <input type="text"
-          class="form-control"
-          id="status"
-          v-model="newProduct.status"
+          id="phone"
+          v-model="newProduct.phone"
           required
         >
       </div>
      
-      </div>
-       <div class="mb-3">
-        <label for="desc" class="form-label">Description</label>
-        <textarea 
-          class="form-control"
-          id="desc"
-          v-model="newProduct.description"
-          required></textarea>
-      
-      </div>
       
       <div class="modal-footer">
           <button type="button" class="btn btn-secondary" @click="closeModal">
@@ -101,7 +71,6 @@
              Confirm
           </button>
         </div>
-       
     </form>
         </div>
         
@@ -115,25 +84,44 @@ import { useRouter } from 'vue-router';
 
 
 import { useGestionStore } from '../../store/gestion';
-import { ref } from 'vue';
+import { ref,  watch, onMounted } from 'vue';
 
 const store = useGestionStore()
 const router = useRouter()
 
 
-const newProduct = ref({ name: "", description: "", price: "", stock: "", category: "", barcode: "", status: ""});
+const newProduct = ref({ name: "", address: "", email: "", phone: "" });
 
 function closeModal() {
     router.push({ name: 'ListProduct' });
 }
 
+const editProduct = (product) => {
+  
+    isEditing.value = true;
+    newProduct.value = { ...product };
+    
+  
+};
+
+onMounted(() => {
+  if (store.currentIndex !== null && store.currentIndex >= 0 && store.currentIndex < store.products.length) {
+    editProduct(store.products[store.currentIndex]);
+  }
+});
+
+watch(() => store.currentIndex, (newIndex) => {
+  if (newIndex !== null && newIndex >= 0 && newIndex < store.products.length) {
+    editProduct(store.products[newIndex]);
+  }
+});
+
 const resetForm = () => {
-    newProduct.value = ref({ name: "", description: "", price: "", stock: "", category: "", barcode: "", status: "" });
+    newProduct.value = ref({  name: "", description: "", price: "", stock: "", category: "", barcode: "", status: "" });
 }
+
 const onSubmit = () => {
-  console.log(store); 
-  console.log(typeof store.addProduct); 
-    store.addProduct(
+    store.editproduct(
         store.currentIndex,
         newProduct.value.name,
         newProduct.value.description,
@@ -151,13 +139,6 @@ const onSubmit = () => {
 
 </script>
 <style scoped>
-
-.champs{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  column-gap: 20px;
-}
 #carouselExampleControls .carousel-item img{
   height: 100vh;
 }
@@ -165,7 +146,7 @@ const onSubmit = () => {
   height: 200px;
 }
 .modal-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;

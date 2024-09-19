@@ -13,6 +13,7 @@ import EditCustomer from '../components/customers/EditCustomer.vue';
 
 
 
+
 const routes = [
   { path: '/', name: "accueil", component: Accueil },
   { path: '/add-order', name: "AddOrder", component: AddOrder },
