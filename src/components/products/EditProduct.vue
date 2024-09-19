@@ -104,17 +104,7 @@ const editProduct = (product) => {
   
 };
 
-onMounted(() => {
-  if (store.currentIndex !== null && store.currentIndex >= 0 && store.currentIndex < store.products.length) {
-    editProduct(store.products[store.currentIndex]);
-  }
-});
 
-watch(() => store.currentIndex, (newIndex) => {
-  if (newIndex !== null && newIndex >= 0 && newIndex < store.products.length) {
-    editProduct(store.products[newIndex]);
-  }
-});
 
 const resetForm = () => {
     newProduct.value = ref({  name: "", description: "", price: "", stock: "", category: "", barcode: "", status: "" });

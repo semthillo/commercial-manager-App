@@ -2,7 +2,7 @@
     <navbar />
 
     <div class="container d-flex justify-content-end mb-2">
-         <router-link class="btn btn-secondary mt-3" to="/list-order"><i class="fa fa-home" aria-hidden="true"></i> Order List</router-link>
+         <router-link class="btn btn-secondary mt-3" to="/list-order"><i class="fa fa-list" aria-hidden="true"></i> Order List</router-link>
      </div>
      <div class="container">
         <form >
@@ -95,7 +95,7 @@
     </tr>
     <tr >
         <td colspan="4">
-            <router-link class="btn btn-success mt-3" to="/list-order"><i class="fa fa-home" aria-hidden="true"></i> Save new Details</router-link>
+            <router-link class="btn btn-success mt-3" to="/list-order"><i class="fa fa-list" aria-hidden="true"></i> Save new Details</router-link>
         </td> 
      </tr>
    
