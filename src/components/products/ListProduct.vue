@@ -90,7 +90,7 @@
  
  
  const destroy = () => {
-   if (window.confirm("Confirmer la suppression de ce client")) {
+   if (window.confirm("Confirm the deletion of this client")) {
      const index = store.products.findIndex(r => r === selectedProduct.value);
      if (index !== -1) {
        store.removeProduct(index);

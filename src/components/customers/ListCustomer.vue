@@ -81,7 +81,7 @@ const edit = () => {
 
 
 const destroy = () => {
-  if (window.confirm("Confirmer la suppression de ce client")) {
+  if (window.confirm("Confirm the deletion of this client")) {
     const index = store.customers.findIndex(r => r === selectedCustomer.value);
     if (index !== -1) {
       store.removeCustomer(index);

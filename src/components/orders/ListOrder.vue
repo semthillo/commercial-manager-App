@@ -117,7 +117,7 @@
   }
   
   function destroy(order) {
-    if (window.confirm('Confirmer la suppression de cet ordre ?')) {
+    if (window.confirm('Confirm the deletion of this order ?')) {
       const index = store.orders.findIndex(o => o.id === order.id);
       if (index !== -1) {
         store.removeOrder(index);

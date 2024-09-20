@@ -6,7 +6,7 @@
      </div>
      <div class="container">
         <form >
-            <div class="champs">
+            <div class="inputs">
                 <div class="mb-3">
         <label for="date" class="form-label">Date</label>
         <input
@@ -110,7 +110,7 @@
  
  </script>
  <style scoped>
-     .champs{
+     .inputs{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);

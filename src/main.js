@@ -9,7 +9,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import { createPinia } from 'pinia'
 import router from './router/router';
-import Navbar from './Navbar.vue';
+import Navbar from './components/Navbar.vue';
 
 
 

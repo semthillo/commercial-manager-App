@@ -24,7 +24,7 @@
         </div>
         <div class="modal-body">
     <form @submit.prevent="onSubmit">
-      <div class="champs">
+      <div class="inputs">
         <div class="mb-3">
         <label for="name" class="form-label">Poduct Name</label>
         <input
@@ -152,7 +152,7 @@ const onSubmit = () => {
 </script>
 <style scoped>
 
-.champs{
+.inputs{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
