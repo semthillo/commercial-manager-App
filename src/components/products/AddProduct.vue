@@ -74,15 +74,15 @@
       </div>
       <div class="mb-3">
         <label for="status" class="form-label">Status</label>
-        <input type="text"
-          class="form-control"
-          id="status"
-          v-model="newProduct.status"
-          required
-        >
+        <select class="form-select" aria-label="Default select example">
+          <option selected></option>
+          <option value="1">Active</option>
+          <option value="2">Inactive</option>
+          
+        </select>
       </div>
      
-      </div>
+    </div>
        <div class="mb-3">
         <label for="desc" class="form-label">Description</label>
         <textarea 

@@ -128,6 +128,10 @@
   </script>
   
   <style scoped>
+
+  .btn{
+    margin-left: 5px;
+  }
   .carousel-item img {
     height: 200px;
   }
