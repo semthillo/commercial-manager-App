@@ -4,7 +4,8 @@
          <h2>List of Products</h2>
      </div>
      <div class="container d-flex justify-content-end mb-2">
-         <router-link class="btn btn-info" to="/add-product"><i class="fa fa-cube" aria-hidden="true"></i> Add New Product</router-link>
+      <button class="btn btn-info" @click="newCust"><i class="fa fa-cube" aria-hidden="true"></i> Add New Product</button>
+
      </div>
      
     <div class="container">
@@ -32,7 +33,7 @@
        <td>{{product.category}}</td>
        <td>{{product.barcode}}</td>
        <td>{{product.status}}</td>
-       <td><button type="button" class="btn btn-primary" @click="openModal(product)"><i class="fa fa-eye " aria-hidden="true"></i></button> <button type="button" class="btn btn-warning" @click="edit"><i class="fa fa-pencil" aria-hidden="true"></i></button>  <button type="button" class="btn btn-danger" @click="destroy"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+       <td><button type="button" class="btn btn-primary" @click="openModal(product)"><i class="fa fa-eye " aria-hidden="true"></i></button> <button type="button" class="btn btn-warning" @click="editCust"><i class="fa fa-pencil" aria-hidden="true"></i></button>  <button type="button" class="btn btn-danger" @click="destroy"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
        
      </tr>
    </tbody>
@@ -62,18 +63,34 @@
          
        </div>
      </div>
+     <AddProduct v-if="add" :add="add" @close="add = false"/>
+
+     <EditProduct v-if="editC" :editC="editC" @close="editC = false" />
  </template>
  <script setup>
  import { useRouter } from 'vue-router';
  const router = useRouter()
  import { useGestionStore } from '../../store/gestion';
  import { ref } from 'vue';
+import AddProduct from './AddProduct.vue';
+import EditProduct from './EditProduct.vue';
+ 
  
  const store = useGestionStore()
  
  const selectedProduct = ref(null);
  
- 
+ const add = ref(false)
+const editC = ref(false)
+
+function editCust(){
+  editC.value = true
+}
+
+function newCust() {
+  add.value = true; 
+}
+
  function openModal(product) {
    selectedProduct.value = product;
  }
@@ -82,10 +99,7 @@
    selectedProduct.value = null;
  }
  
- const edit = () => {
-   
-     router.push({ name: 'EditProduct' });
-   }
+
  
  
  

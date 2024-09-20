@@ -28,10 +28,7 @@ function closeModal() {
   selectedCustomer.value = null;
 }
 
-const edit = () => {
-  
-    router.push({ name: 'EditCustomer' });
-  }
+
 
 
 

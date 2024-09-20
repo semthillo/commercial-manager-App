@@ -1,20 +1,4 @@
 <template>
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://mercadoeconsumo.com.br/wp-content/uploads/2020/06/Faturamento-do-e-commerce-cresce.jpg" class="d-block w-100" alt="...">
-    </div>
-    
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
 
     <div class="modal-overlay">
       <div class="modal-content">
@@ -113,6 +97,15 @@
 <script setup>
 import { useRouter } from 'vue-router';
 
+import { defineProps, defineEmits } from 'vue';
+const emit = defineEmits(['close']);
+
+function closeModal() {
+  emit('close');
+}
+
+
+
 
 import { useGestionStore } from '../../store/gestion';
 import { ref } from 'vue';
@@ -123,9 +116,7 @@ const router = useRouter()
 
 const newProduct = ref({ name: "", description: "", price: "", stock: "", category: "", barcode: "", status: ""});
 
-function closeModal() {
-    router.push({ name: 'ListProduct' });
-}
+
 
 const resetForm = () => {
     newProduct.value = ref({ name: "", description: "", price: "", stock: "", category: "", barcode: "", status: "" });
