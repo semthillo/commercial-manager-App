@@ -26,11 +26,11 @@
 </template>
 
 <script setup>
-// Pas besoin de script pour gérer les liens actifs.
+
 </script>
 
 <style scoped>
-/* Appliquer le style à la classe générée par Vue Router */
+
 .router-link-active {
   color: white;
   border-bottom: 5px  solid whitesmoke;

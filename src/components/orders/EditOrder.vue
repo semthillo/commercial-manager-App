@@ -91,11 +91,36 @@
           id="num"
           placeholder="0"
         /></td>
-      <td><button type="button" class="btn btn-danger" ><i class="fa fa-trash" aria-hidden="true"></i> Remove</button></td>
+      <td><button type="button" class="btn btn-danger" @click="firstDet()"><i class="fa fa-trash" aria-hidden="true"></i> Remove</button></td>
+    </tr>
+  
+   
+  
+    <tr v-for="(item, index) in tmps"  :key="index">
+          <td><select class="form-select" aria-label="Default select example">
+        <option selected>Select Product</option>
+        <option value="1">Produt A</option>
+        <option value="2">Product B</option>
+        <option value="3">Product C</option>
+        </select></td>
+            <td><input
+                type="number"
+                class="form-control"
+          id="date"
+          
+        /></td>
+      
+        <td><input
+          type="number"
+          class="form-control"
+          id="num"
+          placeholder="0"
+        /></td>
+        <td><button type="button" class="btn btn-danger" @click="removeDet(index)"><i class="fa fa-trash" aria-hidden="true"></i> Remove</button></td>
     </tr>
     <tr >
         <td colspan="4">
-            <router-link class="btn btn-success mt-3" to="/list-order"><i class="fa fa-list" aria-hidden="true"></i> Save new Details</router-link>
+            <button class="btn btn-success mt-3" @click="counter()"><i class="fa fa-list" aria-hidden="true"></i> Save new Details</button>
         </td> 
      </tr>
    
@@ -105,8 +130,28 @@
 </div>
  </template>
  <script setup>
+import { ref } from 'vue';
 
+ 
 
+const tmps = ref([]);  
+let i = ref(0);       
+
+function counter() {
+  i.value += 1;             
+  tmps.value.push(i.value);    
+  console.log(tmps.value);      
+}
+
+function removeDet(index){
+  tmps.value.splice(index, 1)
+}
+
+function firstDet(){
+  alert("The order must have at least one detail")
+}
+
+ 
  
  </script>
  <style scoped>
