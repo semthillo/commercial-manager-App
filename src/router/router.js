@@ -10,6 +10,8 @@ import ListProduct from '../components/products/ListProduct.vue';
 import EditCustomer from '../components/customers/EditCustomer.vue';
 import EditOrder from '../components/orders/EditOrder.vue';
 import EditProduct from '../components/products/EditProduct.vue';
+import DetailOrderView from '../components/orders/DetailOrderView.vue';
+
 
 
 
@@ -29,6 +31,7 @@ const routes = [
   { path: '/edit-customer', name: "EditCustomer", component: EditCustomer },
   { path: '/edit-order', name: "EditOrder", component: EditOrder },
   { path: '/edit-product', name: "EditProduct", component: EditProduct },
+  { path: '/detail-view', name: "DetailOrder", component: DetailOrderView },
   
 
 

@@ -9,7 +9,7 @@
       </router-link>
     </div>
   
-    <div class="container-fluid">
+    <div class="container">
       <table class="table  table-bordered">
         <thead>
           <tr>
@@ -29,9 +29,9 @@
             <td>{{ order.trackingNumber }}</td>
             <td>{{ order.status }}</td>
             <td>
-              <button type="button" class="btn btn-primary" @click="openModal(order)">
+              <router-link class="btn btn-primary" to="detail-view">
                 <i class="fa fa-eye" aria-hidden="true"></i>
-              </button>
+              </router-link>
               <button type="button" class="btn btn-warning" @click="edit(order)">
                 <i class="fa fa-pencil" aria-hidden="true"> </i>
               </button>
@@ -44,33 +44,7 @@
       </table>
     </div>
   
-    <div class="modal-overlay" v-if="selectedOrder">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">View Order</h5>
-          <button type="button" class="btn-close" @click="closeModal" aria-label="Close">
-            <i class="fa fa-times" aria-hidden="true"></i>
-          </button>
-        </div>
-        <div class="modal-body">
-          <ul>
-            <li><strong>Date:</strong> {{ selectedOrder.date }}</li>
-            <li><strong>Customer:</strong> {{ selectedOrder.client }}</li>
-            <li><strong>Delivery Address:</strong> {{ selectedOrder.deliveryAddress }}</li>
-            <li><strong>Track Number:</strong> {{ selectedOrder.trackingNumber }}</li>
-            <li><strong>Status:</strong> {{ selectedOrder.status }}</li>
-          </ul>
-          <div v-if="selectedDetail">
-            <h5>Details</h5>
-            <ul>
-              <li><strong>Product:</strong> {{ selectedDetail.product }}</li>
-              <li><strong>Quantity:</strong> {{ selectedDetail.quantity }}</li>
-              <li><strong>Price:</strong> {{ selectedDetail.price }}</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+   
   </template>
   
   <script setup>
@@ -102,14 +76,7 @@
   });
   
 
-  function openModal(order) {
-    selectedOrder.value = order;
-  }
-  
-  
-  function closeModal() {
-    selectedOrder.value = null;
-  }
+ 
   
  
   function edit(order) {
@@ -121,7 +88,7 @@
       const index = store.orders.findIndex(o => o.id === order.id);
       if (index !== -1) {
         store.removeOrder(index);
-        closeModal();
+        
       }
     }
   }
