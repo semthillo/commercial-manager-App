@@ -7,13 +7,13 @@
          <router-link class="btn btn-info" to="/add-product"><i class="fa fa-cube" aria-hidden="true"></i> Add New Product</router-link>
      </div>
      
-    <div class="container-fluid">
+    <div class="container">
       <table class="table table-bordered">
    <thead>
      <tr>
        
        <th scope="col">Name</th>
-       <th scope="col">Description</th>
+       
        <th scope="col">Price</th>
        <th scope="col">Stock</th>
        <th scope="col">Category</th>
@@ -26,7 +26,7 @@
      <tr v-for="(product, index) in store.products" :key="index">
        
        <td>{{product.name}}</td>
-       <td>{{product.description}}</td>
+       
        <td>{{product.price}}</td>
        <td>{{product.stock}}</td>
        <td>{{product.category}}</td>
