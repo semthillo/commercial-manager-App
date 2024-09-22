@@ -2,10 +2,10 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Accueil from '../components/Accueil.vue';
 import AddOrder from '../components/orders/AddOrder.vue';
 import AddProduct from '../components/products/AddProduct.vue';
-
+import Addcustomer from '../components/customers/Addcustomer.vue'
 import ListCustomer from '../components/customers/ListCustomer.vue';
 import ListOrder from '../components/orders/ListOrder.vue';
-import Addcustomer from '../components/customers/Addcustomer.vue';
+
 import ListProduct from '../components/products/ListProduct.vue';
 import EditCustomer from '../components/customers/EditCustomer.vue';
 import EditOrder from '../components/orders/EditOrder.vue';

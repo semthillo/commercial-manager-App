@@ -1,6 +1,6 @@
 <template >
     <navbar />
-
+    <div class="container mt-4"><h2>Edit  Order</h2></div>
     <div class="container d-flex justify-content-end mb-2">
          <router-link class="btn btn-secondary mt-3" to="/list-order"><i class="fa fa-list" aria-hidden="true"></i> Order List</router-link>
      </div>
@@ -53,7 +53,7 @@
       
       </div>
       <div class=" d-flex justify-content-start mb-2">
-         <router-link class="btn btn-info mt-3" to="/add-product" @click="addNewOrder"><i class="fa fa-plus" aria-hidden="true"></i> Save</router-link>
+         <router-link class="btn btn-info mt-3" to="/list-order" @click="addNewOrder"><i class="fa fa-plus" aria-hidden="true"></i> Save</router-link>
      </div>
       </form>
      </div>

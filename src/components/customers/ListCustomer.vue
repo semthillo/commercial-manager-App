@@ -4,7 +4,7 @@ import { useRouter } from 'vue-router';
 const router = useRouter()
 import { useGestionStore } from '../../store/gestion';
 import { ref } from 'vue';
-import Addcustomer from './Addcustomer.vue';
+
 import EditCustomer from './EditCustomer.vue';
 
 const store = useGestionStore()
@@ -100,7 +100,7 @@ const destroy = () => {
       </div>
     </div>
 
- <Addcustomer v-if="add" :add="add" @close="add = false" />
+ <AddCustomer v-if="add" :add="add" @close="add = false" />
  <EditCustomer v-if="editC" :editC="editC" @close="editC = false" />
 </template>
 

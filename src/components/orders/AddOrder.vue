@@ -1,7 +1,9 @@
 <template >
     <navbar />
-
+    <div class="container mt-3"><h2>Add New Order</h2></div>
+    
     <div class="container d-flex justify-content-end mb-2">
+      
          <router-link class="btn btn-secondary mt-3" to="/list-order"><i class="fa fa-list" aria-hidden="true"></i> Order List</router-link>
      </div>
      <div class="container">
