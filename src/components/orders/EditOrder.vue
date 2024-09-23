@@ -1,5 +1,5 @@
 <template >
-    <navbar />
+    <NavBar />
     <div class="container mt-4"><h2>Edit  Order</h2></div>
     <div class="container d-flex justify-content-end mb-2">
          <router-link class="btn btn-secondary mt-3" to="/list-order"><i class="fa fa-list" aria-hidden="true"></i> Order List</router-link>

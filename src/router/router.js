@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Accueil from '../components/Accueil.vue';
 import AddOrder from '../components/orders/AddOrder.vue';
 import AddProduct from '../components/products/AddProduct.vue';
-import Addcustomer from '../components/customers/Addcustomer.vue'
+import AddCustomer from '../components/customers/AddCustomer.vue'
 import ListCustomer from '../components/customers/ListCustomer.vue';
 import ListOrder from '../components/orders/ListOrder.vue';
 
@@ -27,7 +27,7 @@ const routes = [
   { path: '/list-customer', name: "ListCustomer", component: ListCustomer },
   { path: '/list-order', name: "ListOrder", component: ListOrder },
   { path: '/list-product', name: "ListProduct", component: ListProduct },
-  { path: '/add-customer', name: "Addcustomer", component: Addcustomer },
+  { path: '/add-customer', name: "AddCustomer", component: AddCustomer },
   { path: '/edit-customer', name: "EditCustomer", component: EditCustomer },
   { path: '/edit-order', name: "EditOrder", component: EditOrder },
   { path: '/edit-product', name: "EditProduct", component: EditProduct },

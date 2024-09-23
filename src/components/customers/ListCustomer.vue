@@ -6,6 +6,7 @@ import { useGestionStore } from '../../store/gestion';
 import { ref } from 'vue';
 
 import EditCustomer from './EditCustomer.vue';
+import AddCustomer from './AddCustomer.vue';
 
 const store = useGestionStore()
 
@@ -45,7 +46,7 @@ const destroy = () => {
 </script>
 
 <template >
-   <navbar />
+   <NavBar />
     <div class="container mb-4 mt-4">
         <h2>List of Customers</h2>
     </div>

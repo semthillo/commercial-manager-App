@@ -1,5 +1,5 @@
 <template >
-    <navbar />
+    <NavBar />
     <div class="container mt-3"><h2>Add New Order</h2></div>
     
     <div class="container d-flex justify-content-end mb-2">

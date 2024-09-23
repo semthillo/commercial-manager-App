@@ -9,7 +9,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import { createPinia } from 'pinia'
 import router from './router/router';
-import Navbar from './components/Navbar.vue';
+import NavBar from './components/NavBar.vue';
 
 
 
@@ -29,7 +29,7 @@ library.add(fab);
 import { far } from '@fortawesome/free-regular-svg-icons';
 library.add(far);
 import { dom } from "@fortawesome/fontawesome-svg-core";
-app.component('Navbar', Navbar);
+app.component('NavBar', NavBar);
 
 
 

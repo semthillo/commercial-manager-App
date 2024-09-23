@@ -9,7 +9,7 @@ const count = ref(0)
 </script>
 
 <template>
-<navbar />
+<NavBar />
 
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">

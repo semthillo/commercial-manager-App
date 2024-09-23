@@ -1,5 +1,5 @@
 <template>
-    <navbar />
+    <NavBar />
     <div class="container mb-4 mt-4">
       <h2>List of Orders</h2>
     </div>
