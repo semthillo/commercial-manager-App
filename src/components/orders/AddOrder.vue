@@ -55,7 +55,7 @@
       
       </div>
       <div class=" d-flex justify-content-start mb-2">
-         <router-link class="btn btn-info mt-3" to="/add-product" @click="addOrder"><i class="fa fa-plus" aria-hidden="true"></i> Submit</router-link>
+         <router-link class="btn btn-info mt-3" to="/list-order" @click="addOrder"><i class="fa fa-plus" aria-hidden="true"></i> Submit</router-link>
      </div>
       </form>
      </div>
