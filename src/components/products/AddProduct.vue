@@ -19,25 +19,6 @@
           required
         />
       </div>
-      
-      <div class="mb-3">
-        <label for="price" class="form-label">Price</label>
-        <input type="text"
-          class="form-control"
-          id="price"
-          v-model="newProduct.price"
-          required
-        >
-      </div>
-      <div class="mb-3">
-        <label for="stock" class="form-label">Stock</label>
-        <input type="text"
-          class="form-control"
-          id="stock"
-          v-model="newProduct.stock"
-          required
-        >
-      </div>
       <div class="mb-3">
         <label for="category" class="form-label">category</label>
         <input type="text"
@@ -47,6 +28,28 @@
           required
         >
       </div>
+      
+      <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input type="number"
+          class="form-control"
+          id="price"
+          v-model="newProduct.price"
+          required
+        >
+        
+      </div>
+   
+      <div class="mb-3">
+        <label for="stock" class="form-label">Stock</label>
+        <input type="number"
+          class="form-control"
+          id="stock"
+          v-model="newProduct.stock"
+          required
+        >
+      </div>
+     
       <div class="mb-3">
         <label for="barcode" class="form-label">Barcode</label>
         <input type="text"

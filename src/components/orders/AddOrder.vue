@@ -1,10 +1,13 @@
 <template >
     <NavBar />
     <div class="container mt-3"><h2>Add New Order</h2></div>
-    
+    <div class=" d-flex justify-content-start mb-2">
+         
+     </div>
     <div class="container d-flex justify-content-end mb-2">
-      
+          
          <router-link class="btn btn-secondary mt-3" to="/list-order"><i class="fa fa-list" aria-hidden="true"></i> Order List</router-link>
+         <router-link class="btn btn-info ms-3 mt-3" to="/list-order" @click="addOrder"><i class="fa fa-plus" aria-hidden="true"></i> Submit</router-link>
      </div>
      <div class="container">
         <form >
@@ -54,9 +57,7 @@
             
       
       </div>
-      <div class=" d-flex justify-content-start mb-2">
-         <router-link class="btn btn-info mt-3" to="/list-order" @click="addOrder"><i class="fa fa-plus" aria-hidden="true"></i> Submit</router-link>
-     </div>
+      
       </form>
      </div>
      
@@ -188,12 +189,7 @@ function firstDet(){
   grid-template-rows: repeat(3, 1fr);
   column-gap: 20px;
 }
-#carouselExampleControls .carousel-item img{
-  height: 100vh;
-}
-          .carousel-item img{
-  height: 200px;
-}
+
 .modal-overlay {
   position: absolute;
   top: 0;

@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Accueil from '../components/Accueil.vue';
+
 import AddOrder from '../components/orders/AddOrder.vue';
 import AddProduct from '../components/products/AddProduct.vue';
 import AddCustomer from '../components/customers/AddCustomer.vue'
@@ -21,7 +21,7 @@ import DetailOrderView from '../components/orders/DetailOrderView.vue';
 
 
 const routes = [
-  { path: '/', name: "accueil", component: Accueil },
+  { path: '/', name: "list-cutomer", component: ListCustomer },
   { path: '/add-order', name: "AddOrder", component: AddOrder },
   { path: '/add-product', name: "AddProduct", component: AddProduct },
   { path: '/list-customer', name: "ListCustomer", component: ListCustomer },

@@ -1,10 +1,11 @@
 <template>
     
     <NavBar />
-
-<div class="container d-flex justify-content-end mb-2">
-         <router-link class="btn btn-secondary mt-3" to="/list-order"><i class="fa fa-list" aria-hidden="true"></i> Order List</router-link>
-     </div>
+    <div class="container mt-4"><h2>Show Order</h2></div>
+    <div class="container d-flex justify-content-end mb-2">
+          <router-link class="btn btn-secondary mt-3" to="/list-order"><i class="fa fa-list" aria-hidden="true"></i> Order List</router-link>
+          
+      </div>
 <div class="container mb-4">
     <h3>Order View :</h3>
       <table class="table  table-bordered table-secondary">
