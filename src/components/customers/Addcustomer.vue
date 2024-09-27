@@ -19,7 +19,7 @@
       </div>
       <div class="mb-3">
         <label for="address" class="form-label">Address</label>
-        <textarea type="text"
+        <textarea  type="text"
           class="form-control"
           id="address"
           v-model="newCustomer.address"
