@@ -8,6 +8,7 @@
         <form @submit.prevent="onSubmit">
           <div class="mb-3">
             <label for="name" class="form-label">Customer Name</label>
+            
             <input
               type="text"
               class="form-control"
