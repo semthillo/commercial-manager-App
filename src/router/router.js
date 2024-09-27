@@ -21,6 +21,18 @@ import DetailOrderView from '../components/orders/DetailOrderView.vue';
 
 
 const routes = [
+  {
+    path: '/list-order',
+    name: 'ListOrder',
+    component: ListOrder,
+    children: [
+      {
+        path: 'add-order',
+        name: 'AddOrder',
+        component: AddOrder
+      }
+    ]
+  },
   { path: '/', name: "list-cutomer", component: ListCustomer },
   { path: '/add-order', name: "AddOrder", component: AddOrder },
   { path: '/add-product', name: "AddProduct", component: AddProduct },

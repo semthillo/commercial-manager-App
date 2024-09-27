@@ -20,7 +20,7 @@
         />
       </div>
       <div class="mb-3">
-        <label for="category" class="form-label">category</label>
+        <label for="category" class="form-label">Category</label>
         <input type="text"
           class="form-control"
           id="category"
@@ -84,7 +84,7 @@
       </div>
       
       <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" @click="closeModal">
+        <button type="button" class="btn btn-secondary" @click="closeModal">
             Close
           </button>
           <button type="submit" class="btn btn-primary">
@@ -113,9 +113,12 @@ const router = useRouter()
 
 const newProduct = ref({ name: "", address: "", email: "", phone: "" });
 
+const emit = defineEmits(['close']);
+
 function closeModal() {
-    router.push({ name: 'ListProduct' });
+  emit('close');
 }
+
 
 const editProduct = (product) => {
   

@@ -20,12 +20,11 @@
       </div>
       <div class="mb-3">
         <label for="address" class="form-label">Address</label>
-        <input type="text"
+        <textarea type="text"
           class="form-control"
           id="address"
           v-model="newCustomer.address"
-          required
-        >
+          required></textarea> 
       </div>
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
