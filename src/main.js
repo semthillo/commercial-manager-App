@@ -29,6 +29,7 @@ library.add(fab);
 import { far } from '@fortawesome/free-regular-svg-icons';
 library.add(far);
 import { dom } from "@fortawesome/fontawesome-svg-core";
+import NavBar from './components/NavBar.vue';
 
 app.component('NavBar', NavBar);
 
